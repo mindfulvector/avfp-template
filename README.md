@@ -1,106 +1,108 @@
-# Plantilla de Sitio para ActiveVFP en IIS
+(Readme automatically translated, please submit PR with any mistakes you may notice.)
 
-¡Bienvenido al repositorio de la Plantilla de Sitio para ActiveVFP en IIS! En este repositorio, encontrarás los archivos y carpetas necesarios para configurar y ejecutar proyectos de ActiveVFP en Internet Information Services (IIS).
+# Site Template for ActiveVFP in IIS
 
-## Acerca de ActiveVFP
-ActiveVFP (AVFP) es un proyecto completamente gratuito y de código abierto para crear aplicaciones web con el lenguaje de programación y la base de datos Visual Foxpro _(y otras bases de datos como MSSQL o MySQL)._ Proporciona un marco fácil de usar en código Fox puro para utilizar una **dll vfp multiproceso** _(vfp mtdll)_ llamada desde **ASP.NET**. Si está considerando programar web con FoxPro, usar FoxPro en la nube o convertir VFP de escritorio a web o móvil, usando Android, iPhone o iPad, esta herramienta es para ti.
+Welcome to the Site Template repository for ActiveVFP in IIS! In this repository, you'll find the necessary files and folders to configure and run ActiveVFP projects in Internet Information Services (IIS).
 
-## Acerca de la Plantilla
+## About ActiveVFP
+ActiveVFP (AVFP) is a completely free and open-source project for creating web applications with the Visual Foxpro programming language and database _(and other databases like MSSQL or MySQL)._ It provides an easy-to-use framework in pure Fox code to utilize a **multithreaded VFP dll** _(vfp mtdll)_ called from **ASP.NET**. If you're considering web programming with FoxPro, using FoxPro in the cloud, or converting desktop VFP to web or mobile using Android, iPhone, or iPad, this tool is for you.
 
-ActiveVFP es un marco de trabajo que permite el desarrollo de aplicaciones web utilizando Visual FoxPro. Esta plantilla proporciona la estructura base para configurar y ejecutar proyectos de ActiveVFP en el entorno de IIS. A continuación, se detalla el contenido de cada carpeta y archivo en esta plantilla.
+## About the Template
 
-## Estructura de Carpetas y Archivos
+ActiveVFP is a framework that enables web application development using Visual FoxPro. This template provides the base structure for configuring and running ActiveVFP projects in the IIS environment. Below is a detailed description of the contents of each folder and file in this template.
 
-- **activevfp.dll** y **activevfp.dll.manifest**: Estos archivos son módulos de ActiveVFP necesarios para su funcionamiento.
+## Folder and File Structure
+
+- **activevfp.dll** and **activevfp.dll.manifest**: These files are ActiveVFP modules necessary for its operation.
 
 - **/bin**
-  - **activevfp_dotnetproxy.dll**: Biblioteca que brinda capacidades .NET para ActiveVFP.
-  - **App_Code.dll**: Biblioteca que contiene código de aplicación compartido.
-  - **AspManifestHelpers.dll**: Biblioteca para ayudar con manifiestos ASP.
+  - **activevfp_dotnetproxy.dll**: Library that provides .NET capabilities for ActiveVFP.
+  - **App_Code.dll**: Library containing shared application code.
+  - **AspManifestHelpers.dll**: Library to help with ASP manifests.
 
 - **/css**
-  - **jquery-ui-1.8.7.css**, **jquery-ui.css**, **jquery.mobile-1.0rc1.min.css**, **Site.css** y **styles.css**: Archivos CSS para el diseño y estilo del sitio.
-  - **Web.Config**: Archivo de configuración para estilos y CSS.
+  - **jquery-ui-1.8.7.css**, **jquery-ui.css**, **jquery.mobile-1.0rc1.min.css**, **Site.css** and **styles.css**: CSS files for site design and styling.
+  - **Web.Config**: Configuration file for styles and CSS.
 
 - **/html**
-  - **default.avfp**: Plantilla HTML para la página principal del sitio.
+  - **default.avfp**: HTML template for the site's main page.
 
 - **/prg**
   - **/handlers**
     - **/lib**
-      - **resthelper.prg**: Manejador de REST para funciones auxiliares.
-    - **resthandler.prg**: Manejador principal de REST.
+      - **resthelper.prg**: REST handler for auxiliary functions.
+    - **resthandler.prg**: Main REST handler.
 
   - **/rest/controllers**
     - **/jsondb**
-      - **configuration.json**: Configuración de base de datos JSON para REST.
-      - **examples.avfp**, **jsondb.avfp**, **reference.avfp**, **test.avfp**: Controladores JSON para REST.
-      - **jsondb.prg**: Controlador principal para manejar solicitudes JSON.
+      - **configuration.json**: JSON database configuration for REST.
+      - **examples.avfp**, **jsondb.avfp**, **reference.avfp**, **test.avfp**: JSON controllers for REST.
+      - **jsondb.prg**: Main controller for handling JSON requests.
 
-  - **main.prg**: Archivo principal de inicio de la aplicación.
-  - **pages.prg**: Archivo que maneja las páginas y su contenido.
+  - **main.prg**: Main application startup file.
+  - **pages.prg**: File that handles pages and their content.
   - **/plugins**
-    - **layouts.prg**: Plugin para administrar diseños de página.
+    - **layouts.prg**: Plugin for managing page layouts.
 
 - **/reports**
-  - **clsheap.prg**, **print2pdf.prg**: Archivos relacionados con generación y manejo de informes.
-  - **runfrx.exe**: Ejecutable para generar informes.
+  - **clsheap.prg**, **print2pdf.prg**: Files related to report generation and handling.
+  - **runfrx.exe**: Executable for generating reports.
 
-- **/javascript**: Archivos JavaScript para la funcionalidad del sitio.
-  - **jquery.js**, **jquery-ui.min.js**, **jquery.validate.min.js**, **ui.jqgrid.js**, entre otros.
+- **/javascript**: JavaScript files for site functionality.
+  - **jquery.js**, **jquery-ui.min.js**, **jquery.validate.min.js**, **ui.jqgrid.js**, among others.
 
 - **/data**
-  - **/newfeats**: Archivos de datos relacionados con nuevas características.
+  - **/newfeats**: Data files related to new features.
 
-- **/docs**: Documentación relacionada con el sitio y ActiveVFP.
-  - **docs.htm**, **IIS_Setup_in_10_steps!.htm**: Documentación HTML.
+- **/docs**: Documentation related to the site and ActiveVFP.
+  - **docs.htm**, **IIS_Setup_in_10_steps!.htm**: HTML documentation.
 
-- **/images**: Imágenes utilizadas en el diseño del sitio.
-  - Varias imágenes utilizadas en los archivos CSS y HTML.
+- **/images**: Images used in site design.
+  - Various images used in CSS and HTML files.
 
-- Archivos en la raíz:
-  - `activevfp.dll`: La biblioteca principal de ActiveVFP para ejecutar código Visual FoxPro en IIS.
-  - `activevfp.dll.manifest`: Archivo de manifiesto que proporciona información sobre la biblioteca `activevfp.dll`.
-  - `gxps.exe` y `runfrx.exe`: Utilidades para generar y ejecutar informes de Visual FoxPro.
-  - `Web.Config`: Archivo de configuración de IIS para el sitio, define cómo se manejan las solicitudes y otras configuraciones.
-  - `webapp.manifest`: Otro archivo de manifiesto relacionado con la aplicación web.
+- Root files:
+  - `activevfp.dll`: The main ActiveVFP library for running Visual FoxPro code in IIS.
+  - `activevfp.dll.manifest`: Manifest file that provides information about the `activevfp.dll` library.
+  - `gxps.exe` and `runfrx.exe`: Utilities for generating and executing Visual FoxPro reports.
+  - `Web.Config`: IIS configuration file for the site, defines how requests are handled and other configurations.
+  - `webapp.manifest`: Another manifest file related to the web application.
 
-## Licencia
+## License
 
-Este proyecto se distribuye bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+This project is distributed under the MIT License. See the LICENSE file for more details.
 
-## Uso con MagicMenu
+## Usage with MagicMenu
 
-Puedes utilizar la herramienta MagicMenu para simplificar el proceso de creación y configuración de sitios utilizando esta plantilla. MagicMenu automatiza la descarga y uso de estas mismas plantillas, permitiéndote concentrarte en el desarrollo de tu aplicación.
+You can use the MagicMenu tool to simplify the process of creating and configuring sites using this template. MagicMenu automates the download and use of these same templates, allowing you to focus on developing your application.
 
-- Puedes descargar y crear sitios manualmente utilizando los archivos y carpetas proporcionados en este repositorio.
-- También puedes utilizar la herramienta MagicMenu para una experiencia más automatizada y amigable.
+- You can download and create sites manually using the files and folders provided in this repository.
+- You can also use the MagicMenu tool for a more automated and user-friendly experience.
   
-Para obtener más información sobre MagicMenu, visita el repositorio: [MagicMenu en GitHub](https://github.com/Irwin1985/MagicMenu).
+For more information about MagicMenu, visit the repository: [MagicMenu on GitHub](https://github.com/Irwin1985/MagicMenu).
 
-## Activación de Características de Windows y Configuración de IIS
+## Windows Feature Activation and IIS Configuration
 
-Para asegurarte de que IIS funcione correctamente con ActiveVFP, sigue estos pasos:
- - Abre "Panel de control" -> "Programas" -> "Programas y características" -> "Activar o desactivar las características de Windows".
- - Marca la casilla "Internet Information Services" y sus subcaracterísticas.
- - Asegúrate de seleccionar "CGI" y "Filtros ISAPI" en la sección "Servicios World Wide Web" -> "Características de desarrollo de aplicaciones".
- - Completa el proceso y reinicia tu sistema si se te solicita.
+To ensure that IIS works correctly with ActiveVFP, follow these steps:
+ - Open "Control Panel" -> "Programs" -> "Programs and Features" -> "Turn Windows features on or off".
+ - Check the "Internet Information Services" box and its sub-features.
+ - Make sure to select "CGI" and "ISAPI Filters" in the "World Wide Web Services" -> "Application Development Features" section.
+ - Complete the process and restart your system if prompted.
 
-## Soporte y Comunidad
+## Support and Community
 
-- Si tienes preguntas o necesitas ayuda con ActiveVFP, visita el [Foro de ActiveVFP](https://groups.google.com/g/activevfp).
-- Ante la ausencia de documentación oficial, el foro es un excelente recurso para obtener ayuda y compartir conocimientos.
+- If you have questions or need help with ActiveVFP, visit the [ActiveVFP Forum](https://groups.google.com/g/activevfp).
+- In the absence of official documentation, the forum is an excellent resource for getting help and sharing knowledge.
 
-## Contribuciones
+## Contributions
 
-¡Siéntete libre de contribuir y mejorar esta plantilla! Si tienes sugerencias, mejoras o correcciones, ¡no dudes en hacer un pull request!
+Feel free to contribute and improve this template! If you have suggestions, improvements, or corrections, don't hesitate to make a pull request!
 
-## Notas Importantes
+## Important Notes
 
-- Asegúrate de cumplir con los requisitos de ActiveVFP y las configuraciones recomendadas para IIS.
-- Consulta la documentación de ActiveVFP y los recursos de IIS para obtener más información.
-- Recuerda que la seguridad y el mantenimiento son fundamentales para un despliegue exitoso.
+- Make sure to comply with ActiveVFP requirements and recommended configurations for IIS.
+- Consult ActiveVFP documentation and IIS resources for more information.
+- Remember that security and maintenance are fundamental for successful deployment.
 
 ---
 
-Esperamos que esta plantilla te ayude a configurar y ejecutar tus proyectos de ActiveVFP en IIS. Si tienes preguntas o necesitas ayuda, no dudes en contactarnos.
+We hope this template helps you configure and run your ActiveVFP projects in IIS. If you have questions or need help, don't hesitate to contact us.
